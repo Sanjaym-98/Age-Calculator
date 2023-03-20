@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(39, 87, 220);
+}
+#card {
+    background-color:rgb(241, 244, 246) ;
+    width: 50vw;
+    height: 50vh;
+  
+   justify-content: center;
+   justify-items: center;
+   text-align: center;
+    border:  solid 1px black;
+    margin-top: 25vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    border-radius: 0 0 24px 24px ;
+}
+#text {
+    color: blue;
+    border-bottom: 0.5px solid black;
+    box-shadow: 22cm;
+}
+
+
+
+.name {
+   display:inline-flex;
+    justify-content:space-between;
+    
+}
+#btn {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(39, 87, 220);
+    font-size: larger;
+}
