@@ -6,27 +6,31 @@ const card = document.getElementById("card");
 const data = document.createElement("h2");
 btn.addEventListener("click",()=>{
    data.innerHTML="" 
-let dateval =date.value;
+let d1 =date.value;
 debugger
-let monthvavl =month.value;
-let yearval =year.value;
+let m1 =month.value;
+let y1 =year.value;
 // if(dateval == ""||monthvavl==""||yearval==""){
 
 // }
-console.log(new Date().getFullYear())
-let years =new Date().getFullYear() - parseInt(yearval);
-let months =  new Date().getMonth()- parseInt(monthvavl);
-let dates =new Date().getDate() -parseInt(dateval);
-if(months<0 ||( months ===0 && dates<0)){
-   years--;
-   months= 12-parseInt(monthvavl)+new Date().getMonth();
-   dates =new Date().getDate()-dateval;
+
+let d2 = new Date().getDate();
+let m2 = new Date().getMonth()+1;
+let y2 = new Date().getFullYear();
+let months=[31,28,31,30,31,30,31,31,30,31,30,31]
+if(d1>d2){
+   d2 = d2 +months[m2-1];
+   m2 =m2-1;
 }
-if(dates<0){
-   months--;
-   const monthdays = new Date(new Date().getFullYear(),new Date().getMonth(),0).getDate();
-   dates =monthdays-new Date().getDate()+new Date().getDate();
+if(m1>m2){
+   m2 =m2+12;
+   y2=y2-1;
 }
-data.innerText =`Your Age is ${years} years ${months} months ${dates} days`
+let d =d2-d1;
+let m =m2-m1; 
+let y = y2-y1
+
+
+data.innerText =`Your Age is ${y} years ${m} months ${d} days`
 card.appendChild(data);
 })
